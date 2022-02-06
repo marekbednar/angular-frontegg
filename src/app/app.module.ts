@@ -9,14 +9,26 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LoginComponent} from './components/login/login.component';
 import {FormsModule} from '@angular/forms';
 import {LoginView} from "./views/login/login.view";
+import {FronteggAppModule, FronteggComponent} from '@frontegg/angular';
+import { ProtectedView } from './views/protected/protected.view.component';
+import { NotFoundView } from './views/not-found/not-found.view';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    LoginView
+    LoginView,
+    ProtectedView,
+    NotFoundView
   ],
   imports: [
+    FronteggAppModule.forRoot(
+      {
+        contextOptions: {
+          baseUrl: 'https://app-ku9ra5ru66pm.frontegg.com'
+        },
+      }
+    ),
     BrowserModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
@@ -29,6 +41,7 @@ import {LoginView} from "./views/login/login.view";
     FormsModule
   ],
   providers: [],
+  entryComponents: [FronteggComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

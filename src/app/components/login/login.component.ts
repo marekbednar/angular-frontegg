@@ -11,6 +11,8 @@ export class LoginComponent implements OnInit {
 
   showApp(): void {
     this.fronteggAppService?.showAdminPortal();
+    console.log(this.fronteggAppService)
+    console.log(this.fronteggAppService)
   }
 
   ngOnInit(): void {
