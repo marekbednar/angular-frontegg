@@ -1,0 +1,5 @@
+<div *ngIf="!(isLoading$ | async)">
+  <img src="{{(user$ | async)?.profilePictureUrl}}" alt="{{(user$ | async)?.name}}" />
+  <div>User name: {{(user$ | async)?.name}}</div>
+</div>
+

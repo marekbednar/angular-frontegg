@@ -12,6 +12,7 @@ import {LoginView} from "./views/login/login.view";
 import {FronteggAppModule, FronteggComponent} from '@frontegg/angular';
 import { ProtectedView } from './views/protected/protected.view.component';
 import { NotFoundView } from './views/not-found/not-found.view';
+import { UserInfoComponent } from './components/user-info/user-info.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +20,14 @@ import { NotFoundView } from './views/not-found/not-found.view';
     LoginComponent,
     LoginView,
     ProtectedView,
-    NotFoundView
+    NotFoundView,
+    UserInfoComponent
   ],
   imports: [
     FronteggAppModule.forRoot(
       {
         contextOptions: {
-          baseUrl: 'https://app-ku9ra5ru66pm.frontegg.com'
+          baseUrl: 'https://frontegg.box.sk'
         },
       }
     ),

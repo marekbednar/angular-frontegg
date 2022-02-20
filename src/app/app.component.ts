@@ -8,7 +8,7 @@ import {FronteggAppService, FronteggAuthService} from "@frontegg/angular";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnDestroy, OnInit {
-  title = 'box';
+  title = 'Frontegg PoC';
   isLoading = true;
   loadingSubscription: Subscription;
   user?: any;

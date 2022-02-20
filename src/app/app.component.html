@@ -1,9 +1,4 @@
 <div *ngIf="!isLoading">
   <router-outlet></router-outlet>
 </div>
-
-<div *ngIf="!isLoading">
-  <img src={{user?.profilePictureUrl}} alt={{user?.name}} />
-  <div>User name: {{user?.name}}</div>
-</div>
-
+<user-info></user-info>
